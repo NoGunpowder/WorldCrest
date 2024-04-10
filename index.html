@@ -1,46 +1,61 @@
-<!DOCTYPE html>  
-<html lang="en">  
-    <h1>忽悠一下</h1>
-<head>  
-<meta charset="UTF-8">  
-<meta name="viewport" content="width=device-width, initial-scale=1.0">  
-<title>搜索框示例</title>  
-<style>  
-    /* 简单的样式，使搜索框更美观 */  
-    .search-container {  
-        width: 300px;  
-        margin: 20px auto;  
-    }  
-    input[type=text] {  
-        width: 100%;  
-        padding: 12px 20px;  
-        margin: 8px 0;  
-        display: inline-block;  
-        border: 1px solid #ccc;  
-        box-sizing: border-box;  
-    }  
-    input[type=submit] {  
-        width: 100%;  
-        background-color: #4CAF50;  
-        color: white;  
-        padding: 14px 20px;  
-        margin: 8px 0;  
-        border: none;  
-        cursor: pointer;  
-    }  
-    input[type=submit]:hover {  
-        background-color: #45a049;  
-    }  
-</style>  
-</head>  
-<body>  
-  
-<div class="search-container">  
-    <form action="/search" method="get">  
-        <input type="text" id="mySearch" name="q" placeholder="搜索...">  
-        <input type="submit" value="搜索">  
-    </form>  
-</div>  
-  
-</body>  
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>世峰机电 - Shifeng Mechatronics</title>
+    <!-- Add your CSS stylesheets here -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Language Switch Buttons -->
+<div id="language-switch">
+    <button onclick="switchToChinese()">中文</button>
+    <button onclick="switchToEnglish()">English</button>
+</div>
+
+<!-- Main Content -->
+<div id="main-content">
+    <!-- Chinese Content -->
+    <div id="chinese-content">
+        <h1>世峰机电 - 智能科技解决方案提供商</h1>
+        <p>欢迎来到世峰机电，我们致力于提供高质量的智能科技解决方案。</p>
+        <p>我们的产品和服务包括但不限于：</p>
+        <ul>
+            <li>智能机器人技术</li>
+            <li>自动化控制系统</li>
+            <li>工业物联网解决方案</li>
+            <!-- Add more Chinese content here -->
+        </ul>
+    </div>
+
+    <!-- English Content (Hidden by default) -->
+    <div id="english-content" style="display: none;">
+        <h1>Shifeng Mechatronics - Intelligent Technology Solutions Provider</h1>
+        <p>Welcome to Shifeng Mechatronics, where we are committed to providing high-quality intelligent technology solutions.</p>
+        <p>Our products and services include but are not limited to:</p>
+        <ul>
+            <li>Intelligent robotics technology</li>
+            <li>Automation control systems</li>
+            <li>Industrial IoT solutions</li>
+            <!-- Add more English content here -->
+        </ul>
+    </div>
+</div>
+
+<!-- JavaScript for Language Switching -->
+<script>
+    function switchToChinese() {
+        document.getElementById('chinese-content').style.display = 'block';
+        document.getElementById('english-content').style.display = 'none';
+    }
+
+    function switchToEnglish() {
+        document.getElementById('chinese-content').style.display = 'none';
+        document.getElementById('english-content').style.display = 'block';
+    }
+</script>
+
+</body>
 </html>
